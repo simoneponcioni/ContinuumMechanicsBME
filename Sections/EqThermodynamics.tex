@@ -1,0 +1,83 @@
+\section{Equilibrium and Thermodynamics}
+\subsection*{Equilibrium equations}
+\smallskip
+
+\textbf{Divergence theorem} \\
+Relates a surface integral with a volume integral.
+The \textit{Flux integral} measures the flow rate through a surface. \\
+$\int_{\partial \omega} \underline{\underline{\mathbf{P}}} \underline{\mathbf{n}}dA = \int_\omega \nabla_{\underline{\mathbf{x}}} \underline{\underline{\mathbf{P}}} dV$ \\
+
+
+\textbf{Global equilibrium} \\
+\textit{Inertia:} $\int_\omega \rho(\underline{\mathbf{x}},t) \underline{\mathbf{\ddot{y}}},(\underline{\mathbf{x}},t)dV$ \\
+\textit{Volume:} $\int_\omega \underline{\mathbf{\kappa}}(\underline{\mathbf{x}},t) dV$ \\
+\textit{Contact:} $\int_{\partial \omega} \underline{\underline{\mathbf{P}}}(\underline{\mathbf{x}},t) \underline{\mathbf{n}}(\underline{\mathbf{x}})dA$ \\
+
+\underline{Equilibrium of forces:} \hspace{12.6mm} $\int_\omega \rho \underline{\mathbf{\ddot{y}}}-\underline{\mathbf{\kappa}}-\nabla_{\underline{\mathbf{x}}} \underline{\underline{\mathbf{P}}}dV= 0$ \\
+\underline{Equilibrium of moments:} \hspace{8mm} $\int_\omega \underline{\underline{\underline{\epsilon}}}\underline{\underline{\mathbf{F}}}\underline{\underline{\mathbf{P}}}^T dV = 0$ \\
+
+
+\textbf{Local equilibrium} \\
+Assuming continuity, express laws of balance in differential or local form: \\
+$\rho \underline{\mathbf{\ddot{y}}}-\underline{\mathbf{\kappa}}-\nabla_{\underline{\mathbf{x}}} \underline{\underline{\mathbf{P}}} = 0 \hspace{5.75mm} \forall \underline{\mathbf{x}} \in \Omega, \forall t$ \\
+$\underline{\underline{\mathbf{F}}}\underline{\underline{\mathbf{P}}}^T - \underline{\underline{\mathbf{P}}}\underline{\underline{\mathbf{F}}}^T = 0 \hspace{8mm} \forall \underline{\mathbf{x}} \in \Omega, \forall t$ \\
+
+The \textit{equilibrium of moments } can be interpreted like a condition of symmetry for the tensors of spatial and material stress: \\
+$\underline{\underline{\mathbf{F}}}\underline{\underline{\mathbf{P}}}^T = \underline{\underline{\mathbf{P}}}\underline{\underline{\mathbf{F}}}^T = \underline{\underline{\mathbf{T}}} = 
+\underline{\underline{\mathbf{T}}}^T = \underline{\underline{\mathbf{S}}} = \underline{\underline{\mathbf{S}}}^T$ 
+
+\subsection*{Thermodynamical principles}
+\smallskip
+If the equations of state at equilibrium are sufficient to describe the evolution of the system under any history, the behaviour of the system is \textbf{reversible}.
+On the other hand, when the equations of state governing the equilibrium are not sufficient to describe the evolution of the system, the behaviour is \textbf{irreversible}. \\
+
+\textbf{First Principle:} Total energy balance
+
+\begin{center}
+\emph{"At every moment the derivative of total energy of the body $\Omega$ is equal to the sum of the power developed by the external forces:"}
+\end{center}
+
+$\dot{E}^{tot} (\Omega, t) = \dot{W}^{ext} (\Omega, t) \qquad \forall t$ \qquad with $E^{tot} = E^{int} + E^{kin}$ \\
+$\dot{E}^{int} = \int_\Omega \underline{\underline{\mathbf{P}}} : \underline{\underline{\mathbf{\dot{F}}}} dV$ \\
+$E^{kin} = \frac{1}{2} \int_\Omega \rho \underline{\mathbf{\dot{y}}}^2 dV$ \\
+
+The time derivative of kinetic energy corresponds to the power developed by inertial forces: \\
+
+$\dot{E}^{kin} = \int_\Omega \rho \underline{\mathbf{\dot{y}}} \underline{\mathbf{\ddot{y}}} dV$ \\
+
+\textbf{Power of external forces:} $E^{vol} + E^{con}$\\
+
+$\int_\Omega \underline{\mathbf{\dot{y}}} \cdot \underline{\kappa} dV + \int_\Gamma \underline{\mathbf{\dot{y}}} \cdot \underline{\mathbf{p}}dA$ \\
+
+\textbf{Conjugacy:} $ \underline{\underline{\mathbf{P}}} : \underline{\underline{\mathbf{\dot{F}}}} = \underline{\underline{\mathbf{S}}} : \underline{\underline{\mathbf{\dot{E}}}} = J \underline{\underline{\mathbf{T}}} : \underline{\underline{\mathbf{D}}}$ \\ ($\underline{\underline{\mathbf{T}}}$: True stress, $\underline{\underline{\mathbf{D}}}$: Deformation rate).
+
+\textbf{Second Principle:} Internal dissipation
+
+$\dot{E}^{int} = \int_\Omega \underline{\underline{\mathbf{P}}} : \underline{\underline{\mathbf{\dot{F}}}} dV = \underbrace{\int_\Omega \dot{\psi} dV}_{\text{Reversible}} + \underbrace{\int_\Omega \Phi dV}_{\text{Irreversible}}$, where $\int_\Omega \Phi dV \geq 0 \forall t$ \\
+When material behaviour is purely elastic, $\Phi \equiv 0$. \\
+
+
+\subsection*{Boundary value problems}
+\smallskip
+
+To formulate a solvable boundary value problem, the equilibrium equations have to be completed by 4 elements:
+ \begin{enumerate}
+ \item Conservation of mass
+ \item Constitutive laws
+ \item Boundary conditions
+ \item Initial conditions
+ \end{enumerate}
+ 
+\textbf{Virtual velocity:} $\delta \underline{\mathbf{\dot{u}}}(\underline{\mathbf{x}},t)=\underline{\mathbf{\dot{u}}}(\underline{\mathbf{x}},t)-\underline{\mathbf{\dot{\tilde{u}}}}(\underline{\mathbf{x}},t)$
+
+The virtual velocity $\delta \underline{\mathbf{\dot{u}}}$ is also called a variation of the velocity $\underline{\mathbf{\dot{u}}}$. An integral form of the equilibrium equation of the ensemble of the matter contained in the volume $\Omega$ can be obtained by multiplying the differential form with a virtual velocity and by integrating over the volume of the solid (this equation is a \textbf{scalar}): \\
+
+$\int_\Omega \delta \underline{\mathbf{\dot{u}}} \cdot (\rho \underline{\mathbf{\ddot{u}}}-\underline{\mathbf{\kappa}}-\nabla_{\underline{\mathbf{x}}} \cdot \underline{\underline{\mathbf{P}}})dV= 0
+\qquad \forall \delta \underline{\mathbf{\dot{u}}}(\underline{\mathbf{x}},t)$ \\
+
+\begin{center}
+\emph{"The principle of virtual powers affirms that the total power developed by $^{ine}f$, $^{vol}f$, $^{con}f$ along an arbitrary field of virtual velocities is zero."}
+\end{center}
+
+\textbf{Virtual powers:} \\
+$\int_\Omega \delta \underline{\mathbf{\dot{u}}} \cdot \rho \underline{\mathbf{\ddot{u}}} dV - \int_\Omega \delta \underline{\mathbf{\dot{u}}} \cdot \underline{\mathbf{\kappa}} dV + \int_\Omega \nabla \delta \underline{\mathbf{\dot{u}}} : \underline{\underline{\mathbf{P}}}dV - \int_{\Gamma_p} \delta \underline{\mathbf{\dot{u}}} \cdot \underline{\mathbf{p}}dA = 0$ \\

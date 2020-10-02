@@ -1,0 +1,59 @@
+\section{Inertial and Volume Forces}
+\subsection*{Linear and angular momentum}
+\smallskip
+
+\textbf{Linear momentum} (formulate the forces and moments associated with inertial effects) \\
+$ \underline{l}(\Omega, t) = M(\Omega) \dot{\underline{c}}(\Omega, t) $ \qquad where $\dot{\underline{c}}$ is the spatial velocity field of the \textbf{centre of mass}. \\
+
+\textbf{Angular momentum:} \\
+\textit{Reference to Origin:} \\
+$ \tensor[^o]{\hat{\underline{J}}}{} = \int_{\Omega} \underline{y} \wedge \dot{\underline{y}} \rho dV $ \\
+
+\textit{Reference to CoM:} \\
+$ \tensor[^c]{\hat{\underline{l}}}{} (\Omega, t) = \int_{\Omega} \underbrace{(\underline{y} - \underline{c})}_{\text{lever arm}} \wedge \dot{\underline{y}} \rho dV $ \\
+
+\textbf{Theorem of König:} \\
+$ \tensor[^o]{\hat{\underline{l}}}{} (\Omega, t) = \underbrace{\tensor[^c]{\hat{\underline{l}}}{}}_{\text{Intrinsic}} + \underbrace{\underline{c} \wedge \underline{l}}_{\text{Extrinsic, wrt O}} $ \\
+
+\textbf{Instantaneous velocity of rotation:} \\
+$\underline{\mathbf{\omega}}(t) = -\frac{1}{2} \underline{\underline{\underline{\mathbf{\epsilon}}}} \underline{\underline{\mathbf{\dot{R}}}} \underline{\underline{\mathbf{R}}}^T$
+
+\textbf{Inertial mass} of 0th order, expressing proportionality between the linear momentum and the translation velocity. \\
+\textbf{Tensor of inertia} of 2nd order and characterises the proportionality between the intrinsic angular momentum and the rotational velocity about the same point. \\
+
+\subsection*{Inertial forces and moments}
+\smallskip
+The forces and the moments with respect to the origin that are opposed to the change of velocity of a deformable body are defined by the material derivatives of the linear and angular momentum respectively: \\
+
+$ \diff{\underline{\mathbf{l}}}{t}(\Omega, t) = \int_{\Omega} \ddot{\underline{\mathbf{y}}} \rho dV$ \\
+$\diff{^{o}\underline{\mathbf{\hat{I}}}}{t} (\Omega, t) = \int_{\Omega} \underline{\mathbf{y}} \wedge \ddot{\underline{\mathbf{y}}} \rho dV$ \\
+
+\subsection*{Volume forces}
+\smallskip
+Such as gravitational or magnetic forces, act remotely and through the considered tissue. \\
+$ \underline{\mathbf{k}}(\Omega, t): \int_{\Omega} \underline{\mathbf{\kappa}}(\underline{x},t) dV $ (Force per unit Vol.) \\
+$ ^{o}\underline{\mathbf{\hat{k}}} = \int_{\Omega} \underline{y} (\underline{x},t) \wedge \underline{\mathbf{\kappa}}(\underline{x},t) dV $ \\
+
+\textbf{Gravitational field:} $\underline{\mathbf{\kappa}}(\underline{x},t) = - \rho (\underline{x},t) g \underline{\tensor[]{e}{_3}} $ With $g = 9.81 [\frac{m}{s^2}]$ \\
+The \textbf{density} of a volume force is derived from the spatial density:
+$\underline{\mathbf{\kappa}}(\underline{x},t) = \tensor[]{\underline{\mathbf{\kappa}}}{_t}(\underline{y},t) \cdot J(\underline{x},t) $ \\
+\textbf{Contact moment:} $\tensor[^o]{\hat{\underline{q}}}{_t} (\omega_o, t) = \int_{\Gamma} \underline{y} \wedge \underline{p} (\underline{x},t) dA $ \\
+
+\columnbreak
+ 
+\subsection*{Contact forces and moments}
+\smallskip
+Distributed on the surface. In nominal description, the force and the moment of the actual contact $\underline{\mathbf{q}}$ and $\underline{\mathbf{\hat{q}}}$ are defined by integration of the nominal stress vector $\underline{\mathbf{p}}$ (PK1) over the original surface. \\
+$\underline{q} (\Gamma,t) = \int_{\Gamma} \underline{p}(\underline{x},t)dA$ \\
+
+Contact force = Inertial force - Volume force: \\
+$\underline{p} = \rho \underline{\ddot{y}} - \underline{k}$ \\
+
+Nominal stress vector due to hydrostatic pressure generally NOT normal to the original surface: \\
+$\Pi (\underline{x},t) = \Pi (\underline{y},t) \circ \underline{y} (\underline{x},t)$ \\
+
+Balance of linear momentum: \\
+$\underbrace{\int \rho \underline{\mathbf{b}} d V}_{\text{vol-f}} + \underbrace{\int \underline{\mathbf{t}} ds}_{\text{con-f}}  = \underbrace{\frac{d}{dt} \int \rho \underline{\mathbf{v}} dV}_{\text{ine-f}} $ \\
+
+\textbf{Force vectors $\tensor[^i]{f}{}$:} \\
+$\tensor[^i]{\underline{\mathbf{f}}}{}(t) = - \frac{1}{3} \left[ \underline{\mathbf{I}}(t) + \underline{\mathbf{W}}(t) \right] \tensor[^i]{A}{_t}(t) \tensor[^i]{\underline{\mathbf{n}}}{}(t) + \frac{1}{4} \tensor[^{con}]{\underline{\mathbf{f}}}{}(t)$ \\

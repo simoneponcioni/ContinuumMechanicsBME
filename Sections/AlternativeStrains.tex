@@ -1,0 +1,140 @@
+\section{Alternative Strains}
+\subsection*{Cauchy-Green tensors}
+\smallskip
+
+\textbf{Right Cauchy-Green strain tensor:} $\rightarrow$ Material tensor \\
+$\underline{\underline{C}} = \tensor[]{\underline{\underline{F}}}{^T} \underline{\underline{F}} = \underline{\underline{U}}^2 $ \\
+Where $\underline{\underline{C}} = \tensor[]{\underline{\underline{C}}}{^T} \rightarrow $ symmetric, positive definite and filters the rotation appearing in polar decomp. of $\underline{\underline{\mathbf{F}}}$ \\
+$ \underline{\underline{\mathbf{C}}} = \sum \limits_{a=1}^{3} \upsilon_{a}^{2} (\underline{c}_a \otimes \underline{c}_a) $
+
+
+
+\textbf{Left Cauchy-Green strain tensor:} $\rightarrow$ Spatial tensor \\
+$\rightarrow$ Maps the actual configuration into itself. \\
+$\underline{\underline{B}} = \underline{\underline{F}} \tensor[]{\underline{\underline{F}}}{^T} = \underline{\underline{V}}^2$ \\
+Where $\underline{\underline{B}} = \tensor[]{\underline{\underline{B}}}{^T}$ \\
+\smallskip
+
+\subsection*{Green-Lagrange strain tensor}
+\smallskip
+Objective transformation that shifts the absence of deformation from $\underline{\underline{\mathbf{I}}}$ to $\underline{\underline{\mathbf{0}}}$. \\
+$ \mathbf{\underline{\underline{E}}} = \mathbf{\frac{1}{2}(\underline{\underline{C}} - \underline{\underline{I}})}  = \underbrace{\frac{1}{2} (\underline{\underline{H}} + \underline{\underline{H}}^T)}_{\text{$\epsilon$}} +  \underline{\underline{HH}}^T$, \qquad
+where $\underline{\underline{E}} = \tensor[]{\underline{\underline{E}}}{^T}$. \\
+When $\mathbf{\underline{\underline{E}}} =0$: rigid body motion (reduction to zero tensor when there is no deformation).
+
+\subsection*{Hill strain tensor}
+\smallskip
+
+$ \underline{\underline{E}}_h = \sum \limits_{a=1}^{3} h(\upsilon_{a}) (\underline{c}_a \otimes \underline{c}_a) $ \\
+Where $h(\upsilon)$ is a strictly increasing scalar function. \\
+
+
+\subsection*{Logarithmic strain tensor}
+\smallskip
+
+$ \ln{\underline{\underline{U}}} = \sum \limits_{a=1}^{3} \ln{(\upsilon_{a})} (\underline{c}_a \otimes \underline{c}_a) $ \qquad from \textbf{right} stretch tensor\\
+$ \ln{\underline{\underline{V}}} = \sum \limits_{a=1}^{3} \ln{(\upsilon_{a})} (\underline{b}_a \otimes \underline{b}_a) $ \qquad from \textbf{left} stretch tensor \\
+
+
+\subsection*{Strain rates}
+\smallskip
+\textbf{Rate of the gradient of the transformation:} gradient of the velocity field. \\ \smallskip
+$\underline{\underline{\dot{\mathbf{F}}}} = \dod{\underline{\underline{\mathbf{F}}}}{t}$ \\
+
+Right Cauchy-Green strain rate tensor: \\
+$\underline{\underline{\dot{\mathbf{C}}}} = \underline{\underline{\dot{\mathbf{F}}}}^T \underline{\underline{\mathbf{F}}} + \underline{\underline{\mathbf{F}}}^T \underline{\underline{\dot{\mathbf{F}}}}$ \\
+
+Green-Lagrange strain rate tensor: \\
+$ \underline{\underline{\dot{\mathbf{E}}}} = \frac{1}{2} \underline{\underline{\dot{\mathbf{C}}}}$
+
+\textbf{Spatial strain rate:} \\ Left Cauchy-Green strain rate \\
+$ \underline{\underline{\dot{\mathbf{B}}}} = \underline{\underline{\dot{\mathbf{F}}\mathbf{F}}}^T + \underline{\underline{\mathbf{F}\mathbf{\dot{F}}}}^T$
+
+
+\smallskip
+\textbf{Eulerian deformation rate:} $\frac{1}{2}(\nabla_y v + \nabla_y^T v)$ \\
+
+$ \underline{\underline{\mathbf{D}}}(\underline{\mathbf{y}},t) = \frac{1}{2}( \underline{\underline{\mathbf{L}}}(\underline{\mathbf{y}},t) +  \underline{\underline{\mathbf{L}}}^T(\underline{\mathbf{y}},t))$ \\
+With the spatial gradient of the velocity field $\underline{\underline{\mathbf{L}}}(\underline{\mathbf{y}},t)$ :\\
+$\underline{\underline{\mathbf{L}}}(\underline{\mathbf{y}},t) = \underline{\underline{\mathbf{\dot{F}}}}(\underline{\mathbf{x}},t) \underline{\underline{\mathbf{F}}}^{-1}(\underline{\mathbf{y}},t) $
+
+\textbf{Formula connecting Eulerian and Lagrangean deformation rates:} \\
+$ \underline{\underline{D}} = \underline{\underline{F}}^{-T} \underline{\underline{\dot{E}}}  \underline{\underline{F}}^{-1}  $ \\
+
+
+
+
+\subsection*{Change of Coordinate System}
+\smallskip
+
+A change of coordinate system involves a time-independent transformation $\underline{\underline{\mathbf{Q}}}$ of the base vectors and a time-independent translation $\underline{\mathbf{q}}$ of the origin. \\
+
+$\underline{\mathbf{\underline{Q}}} = \tensor[^3]{\underline{\mathbf{\underline{R}}}}{}(\frac{\pi}{12}) \tensor[^2]{\underline{\mathbf{\underline{R}}}}{}(\frac{\pi}{9}) \tensor[^1]{\underline{\underline{\mathbf{R}}}}{}(\frac{\pi}{6})$
+$ \qquad \underline{\mathbf{q}} = - \frac{1}{8} \tensor[^3]{\underline{\mathbf{e}}}{}$
+
+Where $\underline{\mathbf{\underline{Q}}}$ and ${\mathbf{\underline{q}}}$ are the orthogonal transformation: \\
+$\underline{\mathbf{\underline{Q}}}$: Translation applying the current base vectors, \\
+${\mathbf{\underline{q}}}$: Current origin into the new base vectors. \\
+
+A vector $\underline{\mathbf{x}}$ in the new system is: $\underline{\mathbf{\tilde{x}}} = \tensor[]{\underline{\underline{\mathbf{Q}}}}{^T}(\underline{\mathbf{x}} - \underline{\mathbf{q}})$
+($\underline{\mathbf{\underline{Q}}}$ and ${\mathbf{\underline{q}}}$ expressed in initial C.S.).
+
+\subsection*{Objectivity}
+($=$ frame indifference) \\
+Property of invariance of a law with respect to a general change of reference frame. Any physical quantity with an intrinsic feature must be invariant relative to a particular change of observer.\\
+
+
+%\begin{table}{ccc}
+%  \centering 
+%\textbf{Spatial} & \textbf{Material} & \textbf{Nominal} \\
+%\hline
+% $\hat{\phi} = \phi(\underline{y}) $ & $ \hat{\phi}(\underline{\hat{y}}) = \phi(\underline{x}) $ & $\phi(\underline{x})$ \\
+% \hline
+%\end{table}
+
+\begin{tabular} {>{\centering\arraybackslash}m{2.7cm}>{\centering\arraybackslash}m{2.8cm}>{\centering\arraybackslash}m{2.7cm}}
+\toprule
+\textbf{Spatial} & \textbf{Material} & \textbf{Nominal} \\
+\midrule
+ $\hat{\phi} = \phi(\underline{y}) $ & $ \hat{\phi}(\underline{\hat{y}}) = \phi(\underline{x}) $ & $\phi(\underline{x})$ \\
+\midrule
+
+ $\underline{\hat{\upsilon}_t} (\underline{\hat{x}}, \hat{t}) = \underline{\underline{Q}}^T \underline{\upsilon}_t (\underline{y},t)$ & $\underline{\hat{\upsilon}_t} (\underline{\hat{x}}, \hat{t}) = \underline{\upsilon}_t (\underline{x},t)$ & $\underline{\underline{Q}}^T \underline{\upsilon}_t (\underline{x},t) $\\
+\midrule
+ 
+$\underline{\underline{\mathbf{B}}}$ & $\underline{\underline{\mathbf{E}}}; \underline{\underline{\mathbf{C}}} $& $ \underline{\underline{\mathbf{F}}}$ \\
+\bottomrule
+\end{tabular}
+\smallskip
+
+Detailed explanation: \\
+$\underline{\underline{\hat{B}}} (\underline{\hat{y}}, \hat{t}) = \underline{\underline{Q}}^T $ $ \underline{\underline{B}} $  $\underline{\underline{Q}}$ \\
+$ \underline{\underline{\hat{\mathbf{F}}}} = \underline{\underline{Q}}^T \underline{\underline{F}}$
+
+\subsection*{Velocity}
+\smallskip
+
+The velocity resulting from a general change of ref. frame is: \\
+
+$ \dot{\hat{\underline{y}}} = \underbrace{\underline{\underline{Q}}^T \dot{\underline{y}}}_{\text{relative velocity}} + \underbrace{\underline{\underline{\dot{Q}}}^T \underline{y} + \dot{\underline{q}}}_{\text{rate of relative rotation}} $ \\
+Observers are located at different places in space and move relative to each other, as implied by the time-dependence of $\mathbf{c}(t)$ and $\mathbf{Q}(t)$. Therefore, the descriptions of motions depend on the observers and, consequently, the velocity and acceleration of motion are, in general, \textbf{not objective}.
+Velocity is objective only when the change of reference frame is time independent! \\
+
+\subsection*{Acceleration}
+\smallskip
+
+The acceleration resulting from a general change of ref. frame is: \\
+
+$ \ddot{\hat{\underline{y}}} = \underbrace{\underline{\underline{Q}}^T \ddot{\underline{y}}}_{\text{Relative acceleration}} + \underbrace{2\underline{\underline{\dot{Q}}}^T \underline{\dot{y}}}_{\text{Coriolis acceleration}} + \underbrace{\underline{\underline{\ddot{Q}}}^T \underline{y} + {\underline{\ddot{q}}}}_{\text{Centrifugal acceleration}} $ \\
+
+
+\subsection*{Lagrangean descriptions}
+\smallskip
+Within the Lagrangean description, distinction between nominal (mixed), spatial (updated) and material (total) Lagrangean description is made. \\
+
+\textbf{Nominal description}: the control volume and its related dimensions are referred to the \textbf{original configuration} $\Omega$. Forces $\underline{f}_t$ (applied by nature in the actual configuration
+$\Omega_t$) are expressed in original positions via the motion $ \underline{f}_t \circ \underline{y}$. \\
+
+\textbf{Spatial Lagrangean description:} the control volume and all related dimensions are referred to the \textbf{actual configuration} $\Omega_t$, and the applied forces are again expressed in the previous positions via the motion. \\
+
+\textbf{Material Lagrangean description:} the control volume and all related dimensions are also referred to the \textbf{original configuration} $\Omega$, but the applied forces are transformed by some function of the motion in order to be defined on the original configuration $\Omega$ and respect a principle of duality. \\

@@ -1,0 +1,110 @@
+\section{Mathematical Background}
+\subsection*{Notations}
+\smallskip
+
+%\begin{tabu} to 0.32\textwidth { | X[c] | X[c] | X[c] | X[c] | X[c] | X[c] | }
+% \hline
+%Order & 0 & 1 & 2 & 3 & 4 \\
+%\hline
+% & scalars & vectors & matrices & vect. of mat. & mat. of mat. \\
+% \hline
+% Intrinsic & $\alpha, \beta, \gamma$ & \underline{a} & \underline{\underline{A}} & $\underline{\underline{\underline{\epsilon}}}$ & \underline{\underline{\underline{\underline{A}}}} \\
+% \hline
+% Index & & $a_i$ & $A_{ij}$ & $\epsilon_{ijk}$ & $A_{ijkl}$ \\
+% \hline
+%Explicit & $v_i$ &  & 5 & &
+%\end{tabu}
+
+\begin{tabular} {>{\centering\arraybackslash}m{1.3cm}>{\centering\arraybackslash}m{1cm}>{\centering\arraybackslash}m{1cm}>{\centering\arraybackslash}m{1cm}>{\centering\arraybackslash}m{1.3cm}>{\centering\arraybackslash}m{1.3cm}}
+\toprule
+Order & 0 & 1 & 2 & 3 & 4\\
+\midrule
+& scalars & vectors & matrices & vect. of mat. & mat. of mat. \\
+ \hline
+ Intrinsic & $\alpha, \beta, \gamma$ & \underline{a} & \underline{\underline{A}} & $\underline{\underline{\underline{\epsilon}}}$ & \underline{\underline{\underline{\underline{A}}}} \\
+ \hline
+ Index & a & $a_i$ & $A_{ij}$ & $\epsilon_{ijk}$ & $A_{ijkl}$ \\
+ \hline
+Explicit &  & \multicolumn{2}{l}{$[a_i] = \left[\begin{smallmatrix}a_1 \\a_2 \\a_3\end{smallmatrix}\right]$} & \multicolumn{2}{l}{$[\underline{\underline{\mathbf{A}}}] = \left[\begin{smallmatrix}A_{11} & A_{12} & A_{13} \\A_{21} & A_{22} & A_{23} \\A_{31} & A_{32} & A_{33}\end{smallmatrix}\right]$} \\
+\bottomrule
+\end{tabular}
+
+
+
+
+
+
+
+\subsection*{Algebra}
+\smallskip
+\textbf{Addition of vectors:} $\underline{s} = \underline{a} + \underline{b}$ = $\left[\begin{smallmatrix} s_{1} \\ s_{2} \\ s_{3} \end{smallmatrix}\right] = \left[\begin{smallmatrix} a_1 + b_1 \\ a_2 + b_2 \\ a_3 + b_3 \end{smallmatrix}\right]$ \\
+\textbf{Multiplication of vectors by a scalar:} $\underline{s} = \alpha \underline{a}$ = $\left[\begin{smallmatrix} s_{1} \\ s_{2} \\ s_{3} \end{smallmatrix}\right] = \left[\begin{smallmatrix} \alpha a_1 \\ \alpha a_2 \\ \alpha a_3 \end{smallmatrix}\right]$ \\
+\textbf{Scalar product:} $ \sigma = \underline{a} \cdot \underline{b}$ \\
+\textbf{Cross product:} $ \underline{s} = \underline{a} \wedge \underline{b}$, $S_{i} = \epsilon_{ijk} a_j b_k$ \\
+\textbf{Third-order Levi-Civita permutation tensor:}
+
+
+\[ \underline{\underline{\epsilon}} =
+\left[ 
+\begin{array}{c@{}}
+ \left[\begin{array}{ccc}
+         0 & 0 & 0 \\
+         0 & 0 & 1 \\
+         0 & -1 & 0 \\
+  \end{array}\right] \\
+   \left[\begin{array}{ccc}
+         0 & 0 & -1 \\
+         0 & 0 & 0 \\
+         1 & 0 & 0 \\
+  \end{array}\right] \\
+ \left[\begin{array}{ccc}
+         0 & 1 & 0 \\
+         -1 & 0 & 0 \\
+         0 & 0 & 0 \\
+  \end{array}\right] \\
+\end{array}\right]
+\]
+
+\textbf{Transformation of vectors: $ (R^3 \wedge R^3)\wedge R^3 \rightarrow R^3 $} \\ $ \underline{y} = \underline{\underline{A}} \underline{x} \Leftrightarrow y_i = A_{ij}x_j \rightarrow $ cm.transform21 \\
+\textbf{Frobenius inner factor:} $ \underline{\underline{A}} : \underline{\underline{B}} = A_{ij} : B_{ij} $ \\
+\textbf{Norm for 2\textsuperscript{nd} order tensor:} $\Vert \underline{\underline{A}} \Vert = \sqrt{\underline{\underline{A}} : \underline{\underline{A}}}$ \\
+\textbf{Composition for matrices:} \\ $ \underline{\underline{C}} = \underline{\underline{A}} \underline{\underline{B}} $, $ C_{ij} = A_{ik} B_{kj} \rightarrow $ cm.composition22 \\
+\textbf{Transformation for matrices:} \\ $ \underline{\underline{Y}} = \underline{\underline{\underline{\underline{\mathbb{A}}}}} \underline{\underline{X}}$ , $ Y_{ij} = A_{ijkl} X_{kl} \rightarrow $ cm.transform42 \\
+
+The \textbf{Eucledian norm} is independent of orthonormal changes of C.S: \\
+$ \Vert \underline{\underline{Q}} \underline{a} \Vert = \sqrt{\underline{\underline{Q}} \underline{a} \cdot \underline{\underline{Q}} \underline{a}} = \sqrt{\underline{\underline{Q^T}} \underline{\underline{Q}} \underline{a} \cdot \underline{a}} = \sqrt{\underline{a} \cdot \underline{a}}$
+
+\textbf{Trace:}	$\Tr{(\underline{\underline{A}})} = \underline{\underline{A}} : \underline{\underline{I}} = \sum \limits_{i=1}^{3} \mathbf{A_{ii}}$ (sum of the elements on the diagonal)\\
+\textbf{Second invariant:} $ \sec{(\underline{\underline{F}})} = \frac{1}{2} (\Tr^2{(\underline{\underline{F}})} - \Tr{(\underline{\underline{F}}^2)}) = \frac{1}{2}(F_{ii}^2 - F_{ij} F_{ji})$ \\
+\textbf{Determinant:} $\det{(\underline{\underline{F}})} = \frac{1}{6} (\Tr^3{(\underline{\underline{F}})} - 3\Tr{(\underline{\underline{F}}}) \Tr{(\underline{\underline{F}}^2)}) + 2\Tr{(\underline{\underline{F}}^3)})$ \\
+The condition $\det{\mathbf{A}} \neq 0$ is necessary and sufficient for the existence of the inverse $\mathbf{A}^{-1}$ of $\mathbf{A}$.
+
+\subsubsection*{Operations on second order tensors}
+
+\textbf{Dyadic product:} $\underline{\underline{\underline{\underline{\mathbb{K}}}}} = \underline{\underline{A}} \otimes \underline{\underline{B}} \Leftrightarrow K_{ijkl} = A_{ij}B_{kl}$ \\
+\textbf{Tensor product:} $\underline{\underline{\underline{\underline{\mathbb{K}}}}} = \underline{\underline{A}} \underline{\otimes} \underline{\underline{B}} \Leftrightarrow K_{ijkl} = A_{ik}B_{jl}$ \\
+\textbf{Transposed product:} $\underline{\underline{\underline{\underline{\mathbb{K}}}}} = \underline{\underline{A}} \overline{\otimes} \underline{\underline{B}} \Leftrightarrow K_{ijkl} = A_{il}B_{jk}$ \\
+\textbf{Symmetric product:} $\underline{\underline{\underline{\underline{\mathbb{K}}}}} = \underline{\underline{A}} \underline{\overline{\otimes}} \underline{\underline{B}} \Leftrightarrow
+K_{ijkl} = \frac{1}{2}(A_{ik}B_{jl} + A_{il}B_{jk})$ \\
+
+\subsubsection*{Operations on fourth order tensors}
+
+\textbf{Composition:} $\underline{\underline{\underline{\underline{\mathbb{S}}}}} = \underline{\underline{\underline{\underline{\mathbb{A}}}}}\underline{\underline{\underline{\underline{\mathbb{B}}}}}
+ \Leftrightarrow S_{ijkl} = A_{ijmn}B_{mnkl}$ \\
+
+
+\subsection*{Analysis}
+\smallskip
+
+\textbf{Gradient} is identified as: $\underline{\underline{F}} = \nabla_{\underline{x}} \underline{y} \Leftrightarrow \left[\begin{smallmatrix} F_{11} & F_{12} & F_{13} \\F_{21} & F_{22} & F_{23} \\F_{31} & F_{32} & F_{33}\end{smallmatrix}\right] = \left[\begin{smallmatrix} \frac{\delta y_1}{\delta x_1} & \frac{\delta y_1}{\delta x_2} & \frac{\delta y_1}{\delta x_3} \\ \frac{\delta y_2}{\delta x_1} & \frac{\delta y_2}{\delta x_2} & \frac{\delta y_2}{\delta x_3} \\ \frac{\delta y_3}{\delta x_1} & \frac{\delta y_3}{\delta x_2} & \frac{\delta y_3}{\delta x_3} \end{smallmatrix}\right]$ \\
+
+The \textbf{divergence} is designated with $\nabla$ followed by scalar product: $\underline{f} = \nabla_{\underline{x}} \cdot \underline{\underline{P}} \Leftrightarrow \left[\begin{smallmatrix} f_{1} \\ f_{2} \\ f_{3}\end{smallmatrix}\right] = \left[\begin{smallmatrix} \frac{\delta P_{11}}{\delta x_1} + \frac{\delta P_{12}}{\delta x_2} + \frac{\delta P_{13}}{\delta x_3} \\ \frac{\delta P_{21}}{\delta x_1} + \frac{\delta P_{22}}{\delta x_2} + \frac{\delta P_{23}}{\delta x_3} \\ \frac{\delta P_{31}}{\delta x_1} + \frac{\delta P_{32}}{\delta x_2} + \frac{\delta P_{33}}{\delta x_3} \end{smallmatrix}\right]$ \\
+
+The \textbf{curl} (rotation of a vector field)  is designated with $\nabla$ followed by cross product: $\rot{\underline{u}} = \nabla \wedge \underline{u}$ \\
+
+\subsubsection*{Differentiation rules}
+
+\textbf{Product of 2 vector fct:} $\nabla_{\underline{x}}(\underline{f} \cdot \underline{g}) = {(\nabla_{\underline{x}}\underline{f})}^T \underline{g}) + {(\nabla_{\underline{x}}\underline{g})}^T \underline{f})$
+
+\textbf{Product of 2\textsuperscript{nd} order tensor fct:} $\nabla_{\underline{\underline{x}}}(\underline{\underline{FG}}) = (\underline{\underline{\mathbf{I}}} \overline{\otimes} \underline{\underline{\mathbf{G}}}) \nabla_{\underline{\underline{x}}}\underline{\underline{F}}^T + (\underline{\underline{\mathbf{F}}} \underline{\otimes} \underline{\underline{\mathbf{I}}}) \nabla_{\underline{\underline{x}}}\underline{\underline{G}}$ \\
+$\diff{g(f(x))}{x} = \diff{g}{f} \diff{f}{g}$

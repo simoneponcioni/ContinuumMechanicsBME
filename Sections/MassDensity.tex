@@ -1,0 +1,61 @@
+\section{Mass and Density}
+\subsection*{Face geometrical centers}
+\smallskip
+
+$\tensor[^{cf1}]{\underline{\mathbf{x}}}{} = 2 \mathlarger{\int_{0}^{1} \int_{0}^{1-\tensor[^3]{b}{}} (\tensor[^2]{b}{} \tensor[^2]{\underline{\mathbf{x}}}{}) + \tensor[^3]{b}{} \tensor[^3]{\underline{\mathbf{x}}}{} + (1 - \tensor[^2]{b}{} - \tensor[^3]{b}{}) \tensor[^4]{\underline{\mathbf{x}}}{}) d \tensor[^2]{b}{}d \tensor[^3]{b}{}}$ \\
+
+
+$\tensor[^{cf2}]{\underline{\mathbf{x}}}{} = 2 \mathlarger{\int_{0}^{1} \int_{0}^{1-\tensor[^3]{b}{}} (\tensor[^1]{b}{} \tensor[^1]{\underline{\mathbf{x}}}{}) + \tensor[^3]{b}{} \tensor[^3]{\underline{\mathbf{x}}}{} + (1 - \tensor[^1]{b}{} - \tensor[^3]{b}{}) \tensor[^4]{\underline{\mathbf{x}}}{}) d \tensor[^1]{b}{}d \tensor[^3]{b}{}}$ \\
+
+$\tensor[^{cf3}]{\underline{\mathbf{x}}}{} = 2 \mathlarger{\int_{0}^{1} \int_{0}^{1-\tensor[^2]{b}{}} (\tensor[^1]{b}{} \tensor[^1]{\underline{\mathbf{x}}}{}) + \tensor[^2]{b}{} \tensor[^2]{\underline{\mathbf{x}}}{} + (1 - \tensor[^1]{b}{} - \tensor[^2]{b}{}) \tensor[^4]{\underline{\mathbf{x}}}{}) d \tensor[^1]{b}{}d \tensor[^2]{b}{}}$ \\
+
+$\tensor[^{cf4}]{\underline{\mathbf{x}}}{} = 2 \mathlarger{\int_{0}^{1} \int_{0}^{1-\tensor[^2]{b}{}} (\tensor[^1]{b}{} \tensor[^1]{\underline{\mathbf{x}}}{}) + \tensor[^2]{b}{} \tensor[^2]{\underline{\mathbf{x}}}{} + (1 - \tensor[^1]{b}{} - \tensor[^2]{b}{}) \tensor[^3]{\underline{\mathbf{x}}}{}) d \tensor[^1]{b}{}d \tensor[^2]{b}{}}$ \\
+
+\subsection*{Face normals}
+\smallskip
+
+$\tensor[^1]{\underline{\mathbf{n}}}{} = \frac{(\tensor[^3]{\underline{\mathbf{x}}}{} - \tensor[^4]{\underline{\mathbf{x}}}{}) \wedge
+(\tensor[^2]{\underline{\mathbf{x}}}{} -\tensor[^4]{\underline{\mathbf{x}}}{})}{\|(\tensor[^3]{\underline{\mathbf{x}}}{} - \tensor[^4]{\underline{\mathbf{x}}}{}) \wedge
+(\tensor[^2]{\underline{\mathbf{x}}}{} -\tensor[^4]{\underline{\mathbf{x}}}{})\|}$ \\
+
+$\tensor[^2]{\underline{\mathbf{n}}}{} = \frac{(\tensor[^3]{\underline{\mathbf{x}}}{} - \tensor[^4]{\underline{\mathbf{x}}}{}) \wedge
+(\tensor[^1]{\underline{\mathbf{x}}}{} -\tensor[^4]{\underline{\mathbf{x}}}{})}{\|(\tensor[^3]{\underline{\mathbf{x}}}{} - \tensor[^4]{\underline{\mathbf{x}}}{}) \wedge
+(\tensor[^1]{\underline{\mathbf{x}}}{} -\tensor[^4]{\underline{\mathbf{x}}}{})\|}$ \\
+
+$\tensor[^3]{\underline{\mathbf{n}}}{} = \frac{(\tensor[^2]{\underline{\mathbf{x}}}{} - \tensor[^4]{\underline{\mathbf{x}}}{}) \wedge
+(\tensor[^1]{\underline{\mathbf{x}}}{} -\tensor[^4]{\underline{\mathbf{x}}}{})}{\|(\tensor[^2]{\underline{\mathbf{x}}}{} - \tensor[^4]{\underline{\mathbf{x}}}{}) \wedge
+(\tensor[^1]{\underline{\mathbf{x}}}{} -\tensor[^4]{\underline{\mathbf{x}}}{})\|}$ \\
+
+$\tensor[^4]{\underline{\mathbf{n}}}{} = \frac{(\tensor[^3]{\underline{\mathbf{x}}}{} - \tensor[^2]{\underline{\mathbf{x}}}{}) \wedge
+(\tensor[^1]{\underline{\mathbf{x}}}{} -\tensor[^3]{\underline{\mathbf{x}}}{})}{\|(\tensor[^3]{\underline{\mathbf{x}}}{} - \tensor[^2]{\underline{\mathbf{x}}}{}) \wedge
+(\tensor[^1]{\underline{\mathbf{x}}}{} -\tensor[^3]{\underline{\mathbf{x}}}{})\|}$ \\
+
+\subsection*{Volume, Mass, C.o.G}
+\smallskip
+
+\textbf{Volume of the tetrahedron:} $ V = \frac{1}{6} (\tensor[^3]{\underline{\mathbf{x}}}{} - \tensor[^4]{\underline{\mathbf{x}}}{}) \cdot \left[ (\tensor[^1]{\underline{\mathbf{x}}}{} -\tensor[^4]{\underline{\mathbf{x}}}{}) \wedge (\tensor[^2]{\underline{\mathbf{x}}}{} -\tensor[^4]{\underline{\mathbf{x}}}{})  \right]$
+
+\textbf{Mass of the tetrahedron:} $M = 6 \rho V$ \\
+
+
+\textbf{Center of Gravity:}
+
+ $\tensor[^c]{\underline{\mathbf{x}}}{} = \frac{6V}{M}  \mathlarger{\int_{0}^{1} \int_{0}^{1-\tensor[^3]{b}{}} \int_{0}^{1-\tensor[^2]{b}{} - \tensor[^3]{b}{}}} \underline{\mathbf{x}} (\tensor[^1]{b}{}, \tensor[^2]{b}{}, \tensor[^3]{b}{}) \rho d \tensor[^1]{b}{} d \tensor[^2]{b}{} d \tensor[^3]{b}{} $ \\
+ 
+ \subsection*{Tensor of mass and Tensor of inertia:}
+\smallskip
+\textbf{Mass} is a scalar, positive, additive. \\
+$M_t(\Omega_t, t) = \int_{\Omega_t} \rho_t dV_t > 0$ \\
+\smallskip
+\textbf{Conservation of mass:} $\rho_t(\underline{\mathbf{y}}, t) = \rho J^{-1}(\underline{\mathbf{y}},t)$ \\
+Tensor of mass $\tensor[^c]{\underline{\underline{M}}}{}(\Omega, t)$ with respect to the CoM.\\
+
+Tensor of inertia $\tensor[^c]{\underline{\underline{J}}}{}(\Omega, t)$ [\si{\kg\metre\squared}]with respect to the CoM. \\
+
+\textbf{Huygens-Steiner:} $\tensor[^o]{\underline{\underline{J}}}{} = M ((\underline{c} \cdot \underline{c}) \underline{\underline{I}} - \underline{c} \otimes \underline{c}) + \tensor[^c]{\underline{\underline{J}}}{} $ \\
+
+\textbf{Moment of inertia} in a plane normal to direction $\underline{\mathbf{n}}$ wrt CoM: \\
+$\tensor[^c]{\underline{\underline{m}}}{}(\Omega, t, \underline{\mathbf{n}}) = \underline{\mathbf{n}} \cdot  \tensor[^c]{\underline{\underline{J}}}{}(\Omega, t)\underline{\mathbf{n}}$
+
+\textbf{Radius of gyration:} $ \tensor[^c]{r}{^G}(\Omega, t, \underline{n}) = \sqrt{\frac{\tensor[^c]{m}{}(\Omega, t, \underline{n})} {M(\Omega, t)} }$ \\
+"Radius at which a concentrated mass leads to an equivalent moment of inertia" \\

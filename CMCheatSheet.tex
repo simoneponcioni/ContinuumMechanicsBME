@@ -1,0 +1,134 @@
+\documentclass[10pt,landscape,a4paper]{article}
+
+\usepackage[svgnames]{xcolor} % Required for colour specification
+
+
+\usepackage[utf8]{inputenc}
+\usepackage{lastpage}
+\usepackage[english]{babel}
+%\usepackage[T1]{fontenc}
+%\usepackage[LY1,T1]{fontenc}
+%\usepackage{frutigernext}
+%\usepackage[lf,minionint]{MinionPro}
+\usepackage{tikz}
+\usetikzlibrary{shapes,positioning,arrows,fit,calc,graphs,graphs.standard}
+\usepackage[nosf]{kpfonts}
+\usepackage[t1]{sourcesanspro}
+\usepackage{multicol}
+\usepackage{wrapfig}
+\usepackage[top=5mm,bottom=5mm,left=5mm,right=5mm]{geometry}
+\usepackage[framemethod=tikz]{mdframed}
+\usepackage{microtype}
+\usepackage{pdfpages}
+\usepackage{tensor}
+\usepackage[mlscaleinline=true]{matlab-prettifier}
+\usepackage{blindtext}
+\usepackage{commath}
+\usepackage{relsize}
+\usepackage{tabu}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage[thinc]{esdiff}
+\usepackage{siunitx}
+\usepackage{subfig}
+
+\usepackage{pgffor, ifthen}
+\newcommand{\notes}[3][\empty]{%
+    \noindent \vspace{10pt}\\
+    \foreach \n in {1,...,#2}{%
+        \ifthenelse{\equal{#1}{\empty}}
+            {\rule{#3}{0.5pt}\\}
+            {\rule{#3}{0.5pt}\vspace{#1}\\}
+        }
+}
+
+\DeclareMathOperator{\Tr}{Tr}
+\DeclareMathOperator{\rot}{rot}
+\DeclareMathOperator{\Sec}{Sec}
+
+\let\bar\overline
+
+
+%%%%%%%%%%%%%%%%%%
+
+\usepackage[utf8]{inputenc} % Required for inputting international characters
+\usepackage[T1]{fontenc} % Output font encoding for international characters
+\usepackage{PTSerif} % Use the Paratype Serif font
+
+%%%%%%%%%%%%%%%%%%
+
+
+
+
+\include{sections/def}
+
+\begin{document}
+
+
+\begin{titlepage} % Suppresses headers and footers on the title page
+
+	\centering % Centre all text
+	
+	%------------------------------------------------
+	%	Title and subtitle
+	%------------------------------------------------
+\vspace*{3.5cm}
+	\setlength{\unitlength}{0.2\textwidth} % Set the width of the curly brackets above and below the titles
+	
+	{\color{myblue}\resizebox*{\unitlength}{\baselineskip}{\rotatebox{90}{$\}$}}}\\[\baselineskip] % Top curly bracket
+	
+	\textcolor{myred}{\textit{\Huge Continuum Mechanics}}\\[\baselineskip]
+	
+	{\color{myred}\Large SIMONE PONCIONI, BME }\\ [\baselineskip] % Subtitle or further description
+	{\color{myred}\large 02.2020 }\\ % Subtitle or further description
+
+	{\color{myblue}\resizebox*{\unitlength}{\baselineskip}{\scalebox{1}[-1]{\rotatebox{90}{$\}$}}}} % Bottom curly bracket
+	\vspace*{5cm} % Whitespace between the title and the author name
+
+\begin{minipage}{0.6\textwidth}
+This cheat sheet is based on the lecture series \textit{399219-FS2019-0: Continuum Mechanics} by Prof. Dr. Ph. Zysset of the Master's Program in Biomedical Engineering (BME) at the University of Bern. Formulae and figures are either taken from the lectures or from \textit{Nonlinear Solid Mechanics: A Continuum Approach for Engineering} by G.A. Holzapfel. The author does not provide any guarantee regarding the correctness and/or completeness of the formulae.
+The template is available at https://github.com/tim-st/latex-cheatsheet.
+For further questions, requests and error reporting please contact the author: Simone.poncioni@students.unibe.ch
+\end{minipage}		
+
+	\vfill % Whitespace between the author name and the publisher logo
+	
+	%------------------------------------------------
+	%	Publisher
+	%------------------------------------------------
+	
+\begin{figure}[htpb]%
+    \centering
+    \subfloat{{\includegraphics[height=0.1\linewidth]{img/TI_eps.eps} }}%
+    \hspace{8cm}
+    \subfloat{{\includegraphics[height=0.1\linewidth]{img/Universitat-Bern-01.eps} }}%
+\end{figure}
+
+\end{titlepage}
+\footnotesize
+\small
+\begin{multicols*}{3}
+\input{Sections/MathBack}
+\smallskip
+\input{Sections/GeometryMotion}
+\smallskip
+\input{Sections/HomogeneousTransformations}
+\smallskip
+\input{Sections/AlternativeStrains}
+\smallskip
+\input{Sections/MassDensity}
+\smallskip
+\input{Sections/InertialVolumeForces}
+\input{Sections/Stresses}
+\smallskip
+\input{Sections/ConstLaws}
+\smallskip
+\input{Sections/EqThermodynamics}
+\vfill\null
+\columnbreak
+\input{Sections/Notes}
+\vspace*{\fill}
+\\ SP 2020
+
+\end{multicols*}
+\end{document}
